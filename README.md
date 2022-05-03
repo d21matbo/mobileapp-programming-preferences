@@ -12,7 +12,7 @@ myPreferenceRef = getSharedPreferences("preferences", MODE_PRIVATE);
 
 According to the documentation for activities `onResume` is called just before the activity starts interacting with the user.
 The code that is executed gets the String value stored in `myPreferenceRef` under the name `"savedPreference"` or the String
-`"Data missing"` if the SharedPreference does not exist.
+`"Data missing"` if the shared preference does not exist.
 ```java
 protected void onResume() {
     super.onResume();
@@ -20,6 +20,7 @@ protected void onResume() {
     textView.setText(data);
 }
 ```
+
 ![](screenshot_data_missing)
 
 - [x] Create a new screen called SecondActivity that can be opened from MainActivity
@@ -52,8 +53,9 @@ public void onClick(View view) {
     myPreferenceEditor.apply();
 }
 ```
+
 ![](screenshot_edit_text.png)
 
 - [x] When closing SecondActivity the data written should be visible in MainActivity
 
-![](screenshot_shared_preferences)
+![](screenshot_shared_preferences.png)
