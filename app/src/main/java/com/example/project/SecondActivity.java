@@ -30,6 +30,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View view) {
                 myPreferenceEditor.putString("savedPreference", editText.getText().toString());
                 myPreferenceEditor.apply();
+                finish();
             }
         });
     }
