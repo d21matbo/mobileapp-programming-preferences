@@ -2,6 +2,7 @@ package com.example.project;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -11,6 +12,8 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences myPreferenceRef;
     private SharedPreferences.Editor myPreferenceEditor;
 
+    private TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,10 +21,16 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        textView = findViewById(R.id.text_view);
+
         myPreferenceRef = getPreferences(MODE_PRIVATE);
         myPreferenceEditor = myPreferenceRef.edit();
-
-        String data = myPreferenceRef.getString("savedPreference", "Data missing");
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String data = myPreferenceRef.getString("savedPreference", "Data missing");
+        textView.setText(data);
+    }
 }
