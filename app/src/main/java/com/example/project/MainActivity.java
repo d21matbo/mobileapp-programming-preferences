@@ -13,7 +13,6 @@ import androidx.appcompat.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences myPreferenceRef;
-
     private TextView textView;
 
     @Override
