@@ -16,8 +16,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="210dp"
-        tools:layout_editor_absoluteY="358dp" />
+        android:layout_marginBottom="80dp"
+        />
 
     <Button
         android:id="@+id/button_second"
