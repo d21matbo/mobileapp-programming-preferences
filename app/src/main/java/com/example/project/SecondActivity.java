@@ -10,7 +10,6 @@ import android.widget.EditText;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private SharedPreferences myPreferenceRef;
     private SharedPreferences.Editor myPreferenceEditor;
     private EditText editText;
 
@@ -19,7 +18,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        myPreferenceRef = getSharedPreferences("preferences", MODE_PRIVATE);
+        SharedPreferences myPreferenceRef = getSharedPreferences("preferences", MODE_PRIVATE);
         myPreferenceEditor = myPreferenceRef.edit();
 
         editText = findViewById(R.id.edit_text);
