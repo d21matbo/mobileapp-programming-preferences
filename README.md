@@ -21,7 +21,7 @@ protected void onResume() {
 }
 ```
 
-![](screenshot_data_missing)
+![](screenshot_data_missing.jpg)
 
 - [x] Create a new screen called SecondActivity that can be opened from MainActivity
 
@@ -54,8 +54,8 @@ public void onClick(View view) {
 }
 ```
 
-![](screenshot_edit_text.png)
+![](screenshot_edit_text.jpg)
 
 - [x] When closing SecondActivity the data written should be visible in MainActivity
 
-![](screenshot_shared_preferences.png)
+![](screenshot_shared_preferences.jpg)
