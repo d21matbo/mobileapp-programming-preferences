@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.text_view);
 
-        myPreferenceRef = getPreferences(MODE_PRIVATE);
+        myPreferenceRef = getSharedPreferences("saved", MODE_PRIVATE);
         myPreferenceEditor = myPreferenceRef.edit();
 
         Button button = findViewById(R.id.button);
