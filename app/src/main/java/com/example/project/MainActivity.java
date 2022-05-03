@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                onButtonClick();
             }
         });
     }
@@ -42,5 +43,10 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         String data = myPreferenceRef.getString("savedPreference", "Data missing");
         textView.setText(data);
+    }
+
+    private void onButtonClick(){
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 }
